@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@drawable/main_background_gradient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/quoteCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/card_background"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/quote_card_gradient"
+                    android:padding="32dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="start"
+                        android:src="@drawable/ic_quote"
+                        android:tint="@color/primary"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/quoteText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:minHeight="120dp"
+                        android:text="Loading quote..."
+                        android:textSize="20sp"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingExtra="6dp"
+                        android:textStyle="italic"
+                        android:fontFamily="serif" />
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:background="@color/primary"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/authorText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="- Author"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_secondary"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/favoriteButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/mark_as_favorite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/accent"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_favorite_border"
+                    app:iconGravity="textStart"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/white"
+                    android:textColor="@color/white"
+                    app:elevation="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/refreshButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/refresh"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/button_primary"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_refresh"
+                        app:iconGravity="textStart"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/white"
+                        android:textColor="@color/white"
+                        app:elevation="4dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/randomButton"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/random_quote"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/button_secondary"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_shuffle"
+                        app:iconGravity="textStart"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/white"
+                        android:textColor="@color/white"
+                        app:elevation="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_history"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/white"
+        android:contentDescription="@string/history" />
+
+</LinearLayout> 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Colors - Sky Blue Theme -->
+    <color name="primary">#3498DB</color>
+    <color name="primary_dark">#2980B9</color>
+    <color name="primary_light">#85C1E9</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent">#E74C3C</color>
+    <color name="accent_light">#EC7063</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#F8F9FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212529</color>
+    <color name="text_secondary">#6C757D</color>
+    <color name="text_hint">#ADB5BD</color>
+    
+    <!-- Status Colors -->
+    <color name="error">#DC3545</color>
+    <color name="success">#28A745</color>
+    <color name="warning">#FFC107</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary">#2980B9</color>
+    <color name="button_secondary">#8E44AD</color>
+    
+    <!-- Favorite Colors -->
+    <color name="favorite_active">#F39C12</color>
+    <color name="favorite_inactive">#ADB5BD</color>
+</resources>

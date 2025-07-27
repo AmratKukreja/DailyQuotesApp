@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Daily Dose</string>
+    <string name="splash_subtitle">Created by Sejal Makhani</string>
+    <string name="loading">Loading...</string>
+    <string name="refresh">Refresh</string>
+    <string name="mark_as_favorite">Mark as Favorite</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="history">History</string>
+    <string name="random_quote">Random Quote</string>
+    <string name="all_quotes">All Quotes</string>
+    <string name="favorites">Favorites</string>
+    <string name="no_quotes_available">No quotes available</string>
+    <string name="no_favorites">No favorite quotes yet</string>
+    <string name="error_fetching_quote">Error fetching quote</string>
+    <string name="network_error">Network error</string>
+    <string name="try_again">Try Again</string>
+    <string name="quote_by">by %s</string>
+</resources>
